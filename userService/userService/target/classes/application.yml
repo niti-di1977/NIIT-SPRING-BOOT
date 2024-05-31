@@ -1,0 +1,19 @@
+spring:
+ application:
+    name: user-ms
+    
+resilience4j.circuitbreaker:
+  instances:
+   userService:
+    failureRateThreshold: 50
+    ringBufferSizeInClosedState: 5
+    ringBufferSizeInHalfOpenState: 3
+    waitDurationInOpenState: 20s
+    automaticTransitionFromOpenToHalfOpenEnabled: true
+    
+    
+    
+
+    
+management.health.circuitbreakers.enabled: true
+management.endpoints.web.exposure.include: '*'
