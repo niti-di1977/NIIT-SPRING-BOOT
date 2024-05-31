@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1> ADDING TASK </h1>
+
+<form action="/save" method="post">
+
+<label> Title: <input type="text" name="title" required></label>
+
+
+<label> Description: <input type="text" name="description"></label>
+
+
+<label> Status: <input type="text" name="status" value="in progress"></label>
+
+<input type="submit" value="Save">
+</form>
+</body>
+</html>
